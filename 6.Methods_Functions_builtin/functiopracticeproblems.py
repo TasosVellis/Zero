@@ -107,3 +107,4 @@ def paper_doll(text):
         new_text += ch * 3
     return new_text
 
+# Test
