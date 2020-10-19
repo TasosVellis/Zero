@@ -107,7 +107,6 @@ def paper_doll(text):
         new_text += ch * 3
     return new_text
 
-
 def blackjack(a, b, c):
     """
     Given three integers between 1 and 11, if their sum is less than or equal to 21,
@@ -170,4 +169,5 @@ def spy_game(nums):
         if num == code[0]:
             code.pop(0)  # code.remove(num) also works
     return len(code) == 1
+
 
