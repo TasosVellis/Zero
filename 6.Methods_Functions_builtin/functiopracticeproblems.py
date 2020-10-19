@@ -169,6 +169,3 @@ def spy_game(nums):
         if num == code[0]:
             code.pop(0)  # code.remove(num) also works
     return len(code) == 1
-
-
-# test
