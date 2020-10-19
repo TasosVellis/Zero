@@ -107,4 +107,67 @@ def paper_doll(text):
         new_text += ch * 3
     return new_text
 
-# Test
+
+def blackjack(a, b, c):
+    """
+    Given three integers between 1 and 11, if their sum is less than or equal to 21,
+    return their sum.
+    If their sum exceeds 21 and there's an eleven, reduce the total sum by 10.
+    Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'
+    :param a: int
+    :param b: int
+    :param c: int
+    :return: int or str
+    blackjack(5,6,7) --> 18
+    blackjack(9,9,9) --> 'BUST'
+    blackjack(9,9,11) --> 19
+    """
+    if sum((a, b, c)) <= 21:
+        return sum((a, b, c))
+    elif sum((a, b, c)) <= 31 and 11 in (a, b, c):
+        return sum((a, b, c)) - 10
+    else:
+        return 'BUST'
+
+def summer_69(arr):
+    """
+    Return the sum of the numbers in the array,
+    except ignore sections of numbers starting
+    with a 6 and extending to the next 9 (every 6 will be followed by at least one 9).
+    Return 0 for no numbers.
+    :param arr: list of integers
+    :return: int
+    """
+    get_result = 0
+    add = True
+    for num in arr:
+        while add:
+            if num != 6:
+                get_result += num
+                break
+            else:
+                add = False
+        while not add:
+            if num != 9:
+                break
+            else:
+                add = True
+                break
+    return get_result
+
+
+# CHALLENGING PROBLEMS
+
+def spy_game(nums):
+    """
+    Write a function that takes in a list of integers and returns True if it contains 007 in order
+    :param nums: array
+    :return: bool
+    """
+    code = [0, 0, 7, "x"]
+
+    for num in nums:
+        if num == code[0]:
+            code.pop(0)  # code.remove(num) also works
+    return len(code) == 1
+
