@@ -169,3 +169,47 @@ def spy_game(nums):
         if num == code[0]:
             code.pop(0)  # code.remove(num) also works
     return len(code) == 1
+
+def count_primes(num):
+    """
+    Write a function that returns the number
+    of prime numbers that exist up to and including a given number
+    :param num: int
+    :return: int
+    """
+    count = 0
+    lower = int(input())
+    upper = int(input())
+    for num in range(lower, upper + 1):
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                count +=1
+    return count
+
+
+# def count_primes(num):
+#     primes = [2]
+#     x = 3
+#     if num < 2:  # for the case of num = 0 or 1
+#         return 0
+#     while x <= num:
+#         for y in range(3,x,2):  # test all odd factors up to x-1
+#             if x%y == 0:
+#                 x += 2
+#                 break
+#         else:
+#             primes.append(x)
+#             x += 2
+#     print(primes)
+#     return len(primes)
+
+def print_big(letter):
+    patterns = {1:'  *  ',2:' * * ',3:'*   *',4:'*****',5:'**** ',6:'   * ',7:' *   ',8:'*   * ',9:'*    '}
+    alphabet = {'A':[1,2,4,3,3],'B':[5,3,5,3,5],'C':[4,9,9,9,4],'D':[5,3,3,3,5],'E':[4,9,4,9,4]}
+    for pattern in alphabet[letter.upper()]:
+        print(patterns[pattern])
+
+print_big('c')
