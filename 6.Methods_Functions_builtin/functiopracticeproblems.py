@@ -15,6 +15,7 @@ def lesser_of_two_evens(a, b):
     else:
         return max(a, b)
 
+
 def animal_crackers(text):
     """
     a function takes a two-word string and returns True if both words begin with same letter
@@ -56,6 +57,7 @@ def old_macdonald(name):
     else:
         return "Name is too short!"
 
+
 def master_yoda(text):
     """
     Given a sentence, return a sentence with the words reversed
@@ -65,6 +67,7 @@ def master_yoda(text):
     master_yoda('We are ready') --> 'ready are We'
     """
     return " ".join(text.split()[::-1])
+
 
 def almost_there(n):
     """
@@ -80,6 +83,7 @@ def almost_there(n):
 
 # LEVEL 2
 
+
 def has_33(nums):
     """
     Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
@@ -90,9 +94,10 @@ def has_33(nums):
     :return:bool
     """
     for i in range(0, len(nums) - 1):
-        if nums[i] == 3 and nums[i+1] == 3:
+        if nums[i] == 3 and nums[i + 1] == 3:
             return True
     return False
+
 
 def paper_doll(text):
     """
@@ -106,6 +111,7 @@ def paper_doll(text):
     for ch in text:
         new_text += ch * 3
     return new_text
+
 
 def blackjack(a, b, c):
     """
@@ -127,6 +133,7 @@ def blackjack(a, b, c):
         return sum((a, b, c)) - 10
     else:
         return 'BUST'
+
 
 def summer_69(arr):
     """
@@ -170,6 +177,7 @@ def spy_game(nums):
             code.pop(0)  # code.remove(num) also works
     return len(code) == 1
 
+
 def count_primes(num):
     """
     Write a function that returns the number
@@ -186,7 +194,7 @@ def count_primes(num):
                 if (num % i) == 0:
                     break
             else:
-                count +=1
+                count += 1
     return count
 
 
@@ -207,9 +215,10 @@ def count_primes(num):
 #     return len(primes)
 
 def print_big(letter):
-    patterns = {1:'  *  ',2:' * * ',3:'*   *',4:'*****',5:'**** ',6:'   * ',7:' *   ',8:'*   * ',9:'*    '}
-    alphabet = {'A':[1,2,4,3,3],'B':[5,3,5,3,5],'C':[4,9,9,9,4],'D':[5,3,3,3,5],'E':[4,9,4,9,4]}
+    patterns = {1: '  *  ', 2: ' * * ', 3: '*   *', 4: '*****', 5: '**** ', 6: '   * ', 7: ' *   ', 8: '*   * ', 9: '*    '}
+    alphabet = {'A': [1, 2, 4, 3, 3], 'B': [5, 3, 5, 3, 5], 'C': [4, 9, 9, 9, 4], 'D': [5, 3, 3, 3, 5], 'E': [4, 9, 4, 9, 4]}
     for pattern in alphabet[letter.upper()]:
         print(patterns[pattern])
+
 
 print_big('c')

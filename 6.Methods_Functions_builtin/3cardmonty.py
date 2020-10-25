@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from random import shuffle
 
 
@@ -13,7 +14,7 @@ def player_guess():
     return int(guess)
 
 
-def check_guess(mylist,guess):
+def check_guess(mylist, guess):
     if mylist[guess] == "O":
         print("Correct")
     else:
