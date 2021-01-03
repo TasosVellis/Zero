@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import collections
 import string
 
@@ -68,7 +69,8 @@ up_low(s)
 
 
 def high_low(t):
-    c = collections.Counter("upper" if x.isupper() else "lower" if x.islower() else "empty" for x in t)
+    c = collections.Counter("upper" if x.isupper(
+    ) else "lower" if x.islower() else "empty" for x in t)
     return c
 
 
@@ -129,6 +131,6 @@ def ispangram(str1, alphabet=string.ascii_lowercase):
 
 
 text = "The quick brown fox jumps over the lazy dog"
-text.replace(" ","")
+text.replace(" ", "")
 print(set(text.lower()))
 print(ispangram(text, alphabet=string.ascii_lowercase))
