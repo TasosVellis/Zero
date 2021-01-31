@@ -24,7 +24,7 @@ print(my_dog.species)
 my_dog.bark(10)
 
 
-class Circle():
+class Circle:
     # Class object attribute
     pi = 3.14
 

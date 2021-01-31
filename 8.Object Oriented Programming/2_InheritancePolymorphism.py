@@ -46,14 +46,15 @@
 # - adding different objects - the + operator performs arithmetic and concatenation
 
 
-class Dog():
+class Dog:
     def __init__(self, name):
         self.name = name
 
     def speak(self):
         return self.name + ' says woof!'
 
-class Cat():
+
+class Cat:
     def __init__(self, name):
         self.name = name
 
@@ -71,6 +72,7 @@ for pet in [niko, felix]:
     print(type(pet))
     print(pet.speak())
 
+
 def pet_speak(pet):
     print(pet.speak())
 
@@ -83,7 +85,7 @@ pet_speak(felix)
 # An abstract is one that never expects to be instantiated
 # Example we will never have an Animal object, only cat and dog object which are derived from Animal
 #
-class Animal():
+class Animal:
 
     def __init__(self, name):
         self.name = name

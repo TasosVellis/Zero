@@ -58,6 +58,6 @@ class Cylinder:
         return top_bottom + 2 * self.pi * self.radius * self.height
 
 
-c = Cylinder(2,3)
+c = Cylinder(2, 3)
 print(c.volume())
 print(c.surface_area())

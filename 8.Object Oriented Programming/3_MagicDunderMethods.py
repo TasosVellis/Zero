@@ -1,13 +1,13 @@
 mylist = [1, 2, 3]
 print(len(mylist))
-class Sample():
+class Sample:
     pass
 
 
 mysample = Sample()
 print(mysample)
 
-class Book():
+class Book:
 
     def __init__(self, title, author, pages):
         self.title = title
@@ -22,9 +22,10 @@ class Book():
 
     def __del__(self):
         print("A book object has been deleted")
+
+
 b = Book('Python Rocks', 'Tasos', 200)
 print(b)
 print(str(b))
 print(len(b))
-del b
-print(b)
+
